@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PalyActivity">
+
+    <TextView
+        android:id="@+id/tvSongName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/sbPlay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvSongName"
+        app:layout_constraintStart_toStartOf="@+id/tvSongName" />
+
+    <ImageView
+        android:id="@+id/ivprevious"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_skip_previous_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPlay"
+        app:layout_constraintEnd_toStartOf="@+id/ivPlay"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/tvSongName"
+        app:layout_constraintTop_toTopOf="@+id/ivPlay" />
+
+    <ImageView
+        android:id="@+id/ivPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play_circle_filled_black_24dp"
+        app:layout_constraintBottom_toTopOf="@+id/sbPlay"
+        app:layout_constraintEnd_toStartOf="@+id/ivPause"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivprevious"
+        app:layout_constraintTop_toBottomOf="@+id/tvSongName" />
+
+    <ImageView
+        android:id="@+id/ivPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pause_circle_filled_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPlay"
+        app:layout_constraintEnd_toStartOf="@+id/ivNext"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivPlay"
+        app:layout_constraintTop_toTopOf="@+id/ivPlay" />
+
+    <ImageView
+        android:id="@+id/ivNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_skip_next_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPause"
+        app:layout_constraintEnd_toEndOf="@+id/tvSongName"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivPause"
+        app:layout_constraintTop_toTopOf="@+id/ivPause" />
+
+    <ImageView
+        android:id="@+id/iv10Reward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/ivPlay"
+        app:layout_constraintEnd_toStartOf="@+id/iv10Forward"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/ivprevious"
+        android:src="@drawable/ic_replay_10_black_24dp" />
+
+    <ImageView
+        android:id="@+id/iv10Forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/iv10Reward"
+        app:layout_constraintEnd_toEndOf="@+id/ivNext"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv10Reward"
+        app:layout_constraintTop_toTopOf="@+id/iv10Reward"
+        android:src="@drawable/ic_forward_10_black_24dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
